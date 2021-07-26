@@ -1,0 +1,211 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Gilroy';
+  font-weight: 600;
+  font-size: 7.2rem;
+  line-height: 8.6rem;
+  color: #0F1319;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Gilroy';
+  font-weight: 400;
+  font-size: 7.2rem;
+  line-height: 8.4rem;
+  margin: 0;
+  color: #0F1319;
+}
+
+h3 {
+  font-family: 'Gilroy';
+  margin: 0;
+  font-weight: 400;
+  font-size: 6.5rem;
+  line-height: 7.5rem;
+  text-align: center;
+  color: #0F1319;
+}
+
+h4 {
+  font-family: 'PIPS';
+  font-weight: normal;
+  font-size: 65px;
+  line-height: 92px;
+  font-weight: 400;
+  text-align: center;
+  color: #0F1319;
+}
+
+h5 {
+  font-size: 4rem;
+  line-height: 4.6rem;
+  font-family: 'Gilroy';
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  color: #0F1319;
+}
+
+h6 {
+  font-family: 'Gilroy';
+  font-size: 2.9rem;
+  line-height: 140%;
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  color: #0F1319;
+}
+
+.header-7 {
+  font-family: 'PIPS';
+  font-weight: 400;
+  font-size: 2.9rem;
+  line-height: 4.1rem;
+  text-align: center;
+  color: #0F1319;
+  display: inline-block;
+}
+
+.header-8 {
+  font-family: 'PIPS';
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+
+.main-text {
+  font-family: 'Active Grotesk Corp';
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 140%;
+}
+
+.additional-text {
+  font-family: 'Gilroy';
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.08rem;
+  color: #0F1319;
+}
+
+button {
+  font-family: 'Gilroy';
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #0F1319;
+  height: 7rem;
+  width: 20rem;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+
+button::hover {
+  color: white;
+  background-color: #0F1319;
+}
+
+.feature-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feature-block h6 {
+  margin-bottom: 7.3rem;
+}
+
+.feature-block h3 {
+  margin-bottom: 10.5rem;
+}
+
+.text_blue {
+  color: #3DBBEE;
+}
+
+input {
+  height: 7rem;
+  max-width: 49rem;
+  width: 50%;
+  border: 1px solid #ECECEC;
+  padding: 0 1.9rem;
+  border-radius: 5px;
+  font-family: 'Active Grotesk Corp';
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 140%;
+}
+
+input::-webkit-input-placeholder {
+  color: #8C8C8C;
+  font-weight: 400;
+}
+
+input:-ms-input-placeholder {
+  color: #8C8C8C;
+  font-weight: 400;
+}
+
+input::-ms-input-placeholder {
+  color: #8C8C8C;
+  font-weight: 400;
+}
+
+input::placeholder {
+  color: #8C8C8C;
+  font-weight: 400;
+}
+
+a {
+  font-family: 'Active Grotesk Corp';
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  text-decoration: underline;
+  color: #0F1319;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */

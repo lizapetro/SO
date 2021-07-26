@@ -1,0 +1,177 @@
+@import './variables.scss';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 7.2rem;
+    line-height: 8.6rem;
+    color: $black;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 7.2rem;
+    line-height: 8.4rem;
+    margin: 0;
+    color: $black;
+}
+
+h3 {
+    font-family: 'Gilroy';
+    margin: 0;
+    font-weight: 400;
+    font-size: 6.5rem;
+    line-height: 7.5rem;
+    text-align: center;
+    color: $black;
+}
+
+h4 {
+    font-family: 'PIPS';
+    font-weight: normal;
+    font-size: 65px;
+    line-height: 92px;
+    font-weight: 400;
+    text-align: center;
+    color: $black;
+}
+
+h5 {
+    font-size: 4rem;
+    line-height: 4.6rem;
+    font-family: 'Gilroy';
+    display: block;
+    margin: 0;
+    font-weight: 400;
+    color: $black;
+}
+
+h6 {
+    font-family: 'Gilroy';
+    font-size: 2.9rem;
+    line-height: 140%;
+    display: block;
+    margin: 0;
+    font-weight: 400;
+    color: $black;
+}
+
+.header-7 {
+    font-family: 'PIPS';
+    font-weight: 400;
+    font-size: 2.9rem;
+    line-height: 4.1rem;
+    text-align: center;
+    color: $black;
+    display: inline-block;
+}
+
+.header-8 {
+    font-family: 'PIPS';
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+
+.main-text {
+    font-family: 'Active Grotesk Corp';
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 140%;
+}
+
+.additional-text {
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.08rem;
+    color: $black;
+}
+
+button {
+    font-family: 'Gilroy';
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: $black;
+    height: 7rem;
+    width: 20rem;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    background-color: $white;
+    &::hover {
+        color: white;
+        background-color: $black;
+    }
+}
+
+.feature-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h6 {
+        margin-bottom: 7.3rem;
+    }
+    h3 {
+        margin-bottom: 10.5rem;
+    }
+}
+
+.text_blue {
+    color: $blue2;
+}
+
+input {
+    height: 7rem;
+    max-width: 49rem;
+    width: 50%;
+    border: 1px solid $liteGray;
+    padding: 0 1.9rem;
+    border-radius: 5px;
+    font-family: 'Active Grotesk Corp';
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 140%;
+    &::placeholder {
+        color: $gray;
+        font-weight: 400;
+    }
+}
+
+a {
+    font-family: 'Active Grotesk Corp';
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    text-decoration: underline;
+    color: $black;
+    display: inline-block;
+    &:hover {
+        text-decoration: none;
+    }
+}
