@@ -60,8 +60,8 @@ h3 {
 h4 {
   font-family: 'PIPS';
   font-weight: normal;
-  font-size: 65px;
-  line-height: 92px;
+  font-size: 6.5rem !important;
+  line-height: 9.2rem !important;
   font-weight: 400;
   text-align: center;
   color: #0F1319;
@@ -207,5 +207,31 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.hover-cursor {
+  cursor: url("../assets/icons/cursor-hover.svg");
+}
+
+.draggable-container--is-dragging {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.draggable--over {
+  cursor: -webkit-grabbing !important;
+  cursor: grabbing !important;
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 50% !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */

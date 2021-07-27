@@ -8,12 +8,67 @@
   <link rel='stylesheet' href='./fonts/fonts.css'></link>
   <link rel='stylesheet' href='./styles/main.css'></link>
   <link rel='stylesheet' href='./styles/style.css'></link>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
 
-  <!-- DRAGABBLE HEADER -->
+  <header class="main-header">
+    <div class="main-header__wrapper">
+      <img src="./assets/icons/logoSO.svg" alt="" class="main-header__logo">
+      <ul class="main-header__navigation">
+        <li>
+          <a href="#main" class="additional-text">Главная</a>
+        </li>
+        <li>
+          <a href="#app" class="additional-text">Приложение</a>
+        </li>
+        <li>
+          <a href="#booking-panel" class="additional-text">Панель бронирования</a>
+        </li>
+        <li>
+          <a href="#price" class="additional-text">Стоимость</a>
+        </li>
+      </ul>
+      <div class="main-header__contacts">
+        <a href="tel: +7 (812) 241 12 73"class="additional-text">Спб: +7 (812) 241 12 73</a>
+        <a href="https://t.me/simple_office">
+          <svg width="2.2rem" height="1.9rem" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.02438 7.84391L20.5348 0.0948405C21.4403 -0.242151 22.2312 0.322397 21.9378 1.7329L21.9395 1.73116L18.6175 17.8529C18.3713 18.9959 17.7119 19.2738 16.7895 18.7353L11.7307 14.8947L9.29059 17.3162C9.02079 17.5941 8.79314 17.8286 8.27038 17.8286L8.62957 12.5253L18.0054 3.80001C18.4134 3.43001 17.9143 3.22157 17.3764 3.58983L5.78985 11.1044L0.795043 9.49934C-0.289244 9.14497 -0.312852 8.3824 1.02438 7.84391Z" fill="#0F1319"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/qr/HPYGOBEOKFK7B1">
+          <svg width="2.3rem" height="2.2rem" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.1906 18.2152C21.7304 19.5149 19.9036 20.5928 18.4465 20.9076C17.4496 21.1199 16.1475 21.2892 11.7643 19.472C6.15757 17.1492 2.54697 11.4518 2.26557 11.0822C1.99608 10.7126 0 8.06542 0 5.32766C0 2.5899 1.39034 1.25679 1.95077 0.68444C2.41104 0.214633 3.17179 0 3.90154 0C4.13764 0 4.34989 0.0119242 4.54067 0.0214634C5.1011 0.0453115 5.38251 0.0786993 5.75216 0.963463C6.21242 2.0724 7.33328 4.81016 7.46683 5.09156C7.60277 5.37297 7.7387 5.75454 7.54792 6.12419C7.36906 6.50576 7.21166 6.67508 6.93025 6.99941C6.64884 7.32374 6.38174 7.57176 6.10034 7.91995C5.84278 8.22282 5.55183 8.54715 5.87617 9.10758C6.2005 9.65609 7.32136 11.4852 8.97164 12.9543C11.1013 14.8502 12.8279 15.4559 13.4455 15.7135C13.9058 15.9043 14.4543 15.859 14.7906 15.5012C15.2175 15.041 15.7445 14.2778 16.2811 13.5266C16.6626 12.9877 17.1444 12.9209 17.65 13.1117C18.1651 13.2905 20.8909 14.6379 21.4513 14.917C22.0118 15.1984 22.3814 15.3319 22.5173 15.568C22.6509 15.8041 22.6509 16.9131 22.1906 18.2152Z" fill="#0F1319"/>
+          </svg>
+        </a>
+      </div>
+      <div class="main-header__menu">
+        <img src="./assets/icons/menu-icon.svg" alt="">
+      </div>
+      <div class="main-header__menu-popup">
+        <div class="menu-popup__btn-close">
+          <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="-0.5" x2="27.5267" y2="-0.5" transform="matrix(0.726583 -0.687078 0.719436 0.694559 1 19.9995)" stroke="#0F1319"/>
+            <line y1="-0.5" x2="27.5202" y2="-0.5" transform="matrix(-0.72304 -0.690806 0.723 -0.690848 20.9316 19.0112)" stroke="#0F1319"/>
+          </svg>   
+        </div>
+        <div class="menu-popup_row">
+          <a class="additional-text" href="https://main.liis.su ">Главная ЛИИС</a>
+          <a class="additional-text" href="">Simple Office</a>
+        </div>
+        <div class="menu-popup_row">
+          <a class="additional-text" href="https://simplehome.liis.su">Simple Home</a>
+          <a class="additional-text" href="">Simple Media</a>
+        </div>
+      </div>
+    </div>
 
-  <section class="draggable-block">
+  </header>
+
+    <!-- DRAGABBLE HEADER -->
+
+  <section class="draggable-block" id="main">
     <img src="./assets/icons/logoSO.svg" alt="" class="logo draggable">
     <img src="./assets/icons/white-blue-sky.svg" alt="" class="sky draggable">
     <img src="./assets/icons/note-icon.svg" alt="" class="note draggable">
@@ -22,34 +77,46 @@
     <span class="header-8 draggable">
       Простая система бронирования <br>рабочих мест
     </span>
-    <div class="additional-text main draggable">
-      Главная
+
+    <!-- <a href="#main" class="additional-text">Главная</a>
+  </li>
+  <li>
+    <a href="#app" class="additional-text">Приложение</a>
+  </li>
+  <li>
+    <a href="#booking-panel" class="additional-text">Панель бронирования</a>
+  </li>
+  <li>
+    <a href="#price" class="additional-text">Стоимость</a> -->
+
+    <div class="menu-item main draggable">
+      <a href="#main" class="additional-text">Главная</a>
     </div>
-    <div class="additional-text admin draggable">
-      Администрирование
+    <div class="menu-item admin draggable">
+      <a class="additional-text" href="">Администрирование</a>
     </div>
-    <div class="additional-text menu draggable">
+    <div class="menu-item menu draggable">
       <img src="./assets/icons/menu-icon.svg" alt="">
     </div>
-    <div class="additional-text app draggable">
-      Приложение
+    <div class="menu-item app draggable">
+      <a class="additional-text" href="#app">Приложение</a> 
     </div>
-    <div class="additional-text booking draggable">
-      Бронирование
+    <div class="menu-item booking draggable">
+      <a class="additional-text" href="#booking-panel">Бронирование</a> 
     </div>
-    <div class="additional-text price-item draggable">
-      Стоимость
+    <div class="menu-item price-item draggable">
+      <a class="additional-text" href="#price">Стоимость</a>
     </div>
-    <div class="additional-text phone draggable">
-      <a href="tel: +7 (812) 241 12 73">Спб: +7 (812) 241 12 73</a> 
+    <div class="menu-item phone draggable">
+      <a class="additional-text" href="tel: +7 (812) 241 12 73">Спб: +7 (812) 241 12 73</a> 
     </div>
     <div class="messangers draggable">
-      <a href="">
+      <a href="https://t.me/simple_office">
         <svg width="2.2rem" height="1.9rem" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1.02438 7.84391L20.5348 0.0948405C21.4403 -0.242151 22.2312 0.322397 21.9378 1.7329L21.9395 1.73116L18.6175 17.8529C18.3713 18.9959 17.7119 19.2738 16.7895 18.7353L11.7307 14.8947L9.29059 17.3162C9.02079 17.5941 8.79314 17.8286 8.27038 17.8286L8.62957 12.5253L18.0054 3.80001C18.4134 3.43001 17.9143 3.22157 17.3764 3.58983L5.78985 11.1044L0.795043 9.49934C-0.289244 9.14497 -0.312852 8.3824 1.02438 7.84391Z" fill="white"/>
         </svg>
       </a>
-      <a href="">
+      <a href="https://wa.me/qr/HPYGOBEOKFK7B1">
         <svg width="2.3rem" height="2.2rem" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M22.1906 18.2152C21.7304 19.5149 19.9036 20.5928 18.4465 20.9076C17.4496 21.1199 16.1475 21.2892 11.7643 19.472C6.15757 17.1492 2.54697 11.4518 2.26557 11.0822C1.99608 10.7126 0 8.06542 0 5.32766C0 2.5899 1.39034 1.25679 1.95077 0.68444C2.41104 0.214633 3.17179 0 3.90154 0C4.13764 0 4.34989 0.0119242 4.54067 0.0214634C5.1011 0.0453115 5.38251 0.0786993 5.75216 0.963463C6.21242 2.0724 7.33328 4.81016 7.46683 5.09156C7.60277 5.37297 7.7387 5.75454 7.54792 6.12419C7.36906 6.50576 7.21166 6.67508 6.93025 6.99941C6.64884 7.32374 6.38174 7.57176 6.10034 7.91995C5.84278 8.22282 5.55183 8.54715 5.87617 9.10758C6.2005 9.65609 7.32136 11.4852 8.97164 12.9543C11.1013 14.8502 12.8279 15.4559 13.4455 15.7135C13.9058 15.9043 14.4543 15.859 14.7906 15.5012C15.2175 15.041 15.7445 14.2778 16.2811 13.5266C16.6626 12.9877 17.1444 12.9209 17.65 13.1117C18.1651 13.2905 20.8909 14.6379 21.4513 14.917C22.0118 15.1984 22.3814 15.3319 22.5173 15.568C22.6509 15.8041 22.6509 16.9131 22.1906 18.2152Z" fill="white"/>
         </svg>
@@ -59,12 +126,47 @@
       <img src="./assets/icons/skolkovo-logo.svg" alt="">
       <span class="main-text">Резиденты</span> 
     </div>
-    <img src="./assets/icons/line-icon.svg" alt="" class="line draggable">
+    <img src="./assets/icons/line-icon.png" alt="" class="line draggable">
     <img src="./assets/icons/cursor-blue.svg" alt="" class="cursor-blue draggable">
     <div class="swiper-block draggable">
-      <div class="swiper-block__item">
-        <span class="additional-text">Удобный инструмент для бронирования рабочих мест и переговорных комнат</span>
-      </div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-block__item__wrapper swiper-slide">
+            <div class="swiper-block__item">
+              <div class="swiper-block__item_helper"></div>
+              <span class="additional-text">Удобный инструмент для бронирования рабочих мест и переговорных комнат</span>
+            </div>
+          </div>
+          <div class="swiper-block__item__wrapper swiper-slide">
+            <div class="swiper-block__item">
+              <div class="swiper-block__item_helper"></div>
+              <span class="additional-text">Возможность интеграции с другими информационными системами</span>
+            </div>
+          </div>
+          <div class="swiper-block__item__wrapper swiper-slide">
+            <div class="swiper-block__item">
+              <div class="swiper-block__item_helper"></div>
+              <span class="additional-text">Информационный киоск для устройств на iPadOS, а также веб-приложение для администрирования системы</span>
+            </div>
+          </div>
+          <div class="swiper-block__item__wrapper swiper-slide">
+            <div class="swiper-block__item">
+              <div class="swiper-block__item_helper"></div>
+              <span class="additional-text">Мобильное приложение для платформ IOS, Android и Huawei</span>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next">
+          <svg width="1.8rem" height="3.6rem" viewBox="0 0 18 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 18.0088C18.0003 18.2165 17.9216 18.4158 17.7811 18.5629L1.29022 35.7803C0.992472 36.0806 0.517915 36.0719 0.230286 35.7611C-0.0502459 35.4578 -0.0502459 34.977 0.230286 34.6737L16.1905 18.0089L0.22881 1.34552C-0.0689389 1.04522 -0.0771609 0.549831 0.210398 0.238892C0.498028 -0.0719757 0.972515 -0.0805626 1.27033 0.219666C1.27659 0.225975 1.2827 0.232361 1.28875 0.238892L17.7796 17.4562C17.9203 17.6027 17.9995 17.8014 18 18.0088Z" fill="#66D1FC"/>
+          </svg>
+        </div>
+        <div class="swiper-button-prev">
+          <svg width="1.8rem" height="3.6rem" viewBox="0 0 18 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.90735e-06 18.0088C-0.000350952 18.2165 0.0783577 18.4158 0.218904 18.5629L16.7098 35.7803C17.0075 36.0806 17.4821 36.0719 17.7697 35.7611C18.0502 35.4578 18.0502 34.977 17.7697 34.6737L1.80954 18.0089L17.7712 1.34552C18.0689 1.04522 18.0772 0.549831 17.7896 0.238892C17.502 -0.0719757 17.0275 -0.0805626 16.7297 0.219666C16.7234 0.225979 16.7173 0.232361 16.7113 0.238892L0.220381 17.4562C0.0796928 17.6027 0.000494003 17.8014 1.90735e-06 18.0088Z" fill="#66D1FC"/>
+          </svg>     
+        </div>
+      </div>  
     </div>
   </section>
 
@@ -82,7 +184,7 @@
 
   <!-- MOBILE-APP -->
 
-  <section class="mobile-app feature-block">
+  <section class="mobile-app feature-block" id="app">
     <h6>Сотрудникам</h6>
     <h3><span class="text_blue">Мобильное приложение</span>  позволяет:</h3>
     <div class="mobile-app__features">
@@ -106,7 +208,7 @@
 
   <!-- BOOKING PANEL STAFF -->
 
-  <section class="booking-panel-staff feature-block">
+  <section class="booking-panel-staff feature-block" id="booking-panel">
     <h6>Сотрудникам</h6>
     <h3>
       <span class="text_blue">Панель бронирования</span> позволяет:
@@ -290,7 +392,7 @@
 
   <!-- PRICE -->
 
-  <section class="price">
+  <section class="price" id="price">
     <h3>Стоимость</h3>
     <h6>Предусмотрено два тарифа в зависимости<br> от IT-инфраструктуры компании</h6>
     <div class="price__info">
@@ -473,15 +575,20 @@
     </div>
 
   </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.12/lib/draggable.js"></script>
   <script>
     const draggable = new Draggable.default(document.querySelectorAll('.draggable-block'), {
+      delay: 100,
       draggable: '.draggable',
     });
       let zIndex = 1;
-      draggable.on('mirror:created', ({ mirror, dragEvent, source }) => {
+
+      draggable.on('mirror:created', ({ mirror, dragEvent, source, ...props }) => {
         mirror.style.zIndex = zIndex
         source.style.visibility = 'hidden'
+        mirror.style.pointerEvent = 'none'
       })
       draggable.on('mirror:destroy', ({ mirror, dragEvent }) => {
         const styleTransform = mirror.style.transform.replace('translate3d(', '').split(', ')
@@ -499,10 +606,13 @@
       const closeBtn = document.querySelector('.close-btn')
       buttonTestSystem.onclick = () => {
         popup.classList.add('active')
+        zIndex = zIndex + 1
+        popup.style.zIndex = zIndex
       }
       closeBtn.onclick = () => {
         popup.classList.remove('active')
       }
+
       const createRequestBtn = document.querySelector('.create-request')
       createRequestBtn.onclick = () => {
         popup.classList.add('complete')
@@ -514,6 +624,34 @@
       completeBtn.onclick = () => {
         testimgSystemBlock.classList.add('complete')
         return false
+      }
+
+      const mobileAppSwiper  = new Swiper(".swiper-container", {
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+        simulateTouch: false
+      });
+
+      const mobileApp = document.querySelector('.mobile-app')
+      const mainHeader = document.querySelector('.main-header')
+
+      window.addEventListener('scroll', () => {
+        (window.scrollY >= mobileApp.offsetTop)
+          ? mainHeader.classList.add('active')
+          : mainHeader.classList.remove('active')
+      })
+
+      const burgerMenu = document.querySelector('.main-header__menu')
+      const popupMenu = document.querySelector('.main-header__menu-popup')
+      const btnClosePopupMenu = document.querySelector('.menu-popup__btn-close')
+      burgerMenu.onclick = () => {
+        popupMenu.classList.toggle('active')
+      }
+      btnClosePopupMenu.onclick = () => {
+        popupMenu.classList.remove('active')
       }
 
   </script>
