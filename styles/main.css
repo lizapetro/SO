@@ -229,9 +229,172 @@ ul {
   cursor: grabbing !important;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   html {
-    font-size: 50% !important;
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 62.5%;
+  }
+  h1 {
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 59px;
+    line-height: 68px;
+    color: #0F1319;
+    margin: 0;
+  }
+  h2 {
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 59px;
+    line-height: 70px;
+    margin: 0;
+    color: #0F1319;
+  }
+  h3 {
+    font-family: 'Gilroy';
+    margin: 0;
+    font-weight: 400;
+    font-size: 41px;
+    line-height: 47px;
+    text-align: center;
+    color: #0F1319;
+  }
+  h4 {
+    font-family: 'PIPS';
+    font-weight: normal;
+    font-size: 41px !important;
+    line-height: 57px !important;
+    font-weight: 400;
+    text-align: center;
+    color: #0F1319;
+  }
+  h5 {
+    font-family: 'Gilroy';
+    margin: 0;
+    font-weight: 400;
+    font-size: 41px;
+    line-height: 47px;
+    text-align: center;
+    color: #0F1319;
+  }
+  h6 {
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 140%;
+  }
+  .header-7 {
+    font-family: 'PIPS';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #0F1319;
+    display: inline-block;
+  }
+  .header-8 {
+    font-family: 'PIPS';
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+  button {
+    font-size: 18px;
+    line-height: 21px;
+    height: 6rem;
+    width: 18rem;
+    border-radius: 12px;
+  }
+  .main-text {
+    font-size: 16px;
+    line-height: 140%;
+  }
+  input {
+    height: 6rem;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 140%;
+  }
+  input::-webkit-input-placeholder {
+    color: #8C8C8C;
+    font-weight: 400;
+  }
+  input:-ms-input-placeholder {
+    color: #8C8C8C;
+    font-weight: 400;
+  }
+  input::-ms-input-placeholder {
+    color: #8C8C8C;
+    font-weight: 400;
+  }
+  input::placeholder {
+    color: #8C8C8C;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 767px) {
+  h5 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  h6 {
+    font-size: 20px;
+    line-height: 140%;
+  }
+  button {
+    height: 5rem;
+    width: 14.5rem;
+    font-size: 16px;
+    line-height: 130%;
+    border-radius: 8px;
+  }
+  .feature-block > h6 {
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 3rem;
+  }
+  .feature-block > h3 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .main-text {
+    font-size: 16px;
+    line-height: 140%;
+  }
+  h4 {
+    font-size: 26px !important;
+    line-height: 30px !important;
+  }
+  input {
+    height: 5rem;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 140%;
+    padding: 1.5rem 2.9rem;
+  }
+  input::-webkit-input-placeholder {
+    color: #8C8C8C;
+    font-weight: 400;
+  }
+  input:-ms-input-placeholder {
+    color: #8C8C8C;
+    font-weight: 400;
+  }
+  input::-ms-input-placeholder {
+    color: #8C8C8C;
+    font-weight: 400;
+  }
+  input::placeholder {
+    color: #8C8C8C;
+    font-weight: 400;
   }
 }
 /*# sourceMappingURL=main.css.map */
