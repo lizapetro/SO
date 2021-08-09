@@ -67,6 +67,7 @@
           <a class="additional-text" href="https://simplehome.liis.su">Simple Home</a>
           <a class="additional-text" href="">Simple Media</a>
         </div>
+        <a class="additional-text phone" href="tel: +7 (812) 241 12 73">Спб: +7 (812) 241 12 73</a> 
       </div>
     </div>
 
@@ -94,7 +95,24 @@
         <rect width="25" height="1.53846" fill="#0F1319"/>
         <rect y="9.2312" width="25" height="1.53846" fill="#0F1319"/>
         <rect y="18.4614" width="25" height="1.53846" fill="#0F1319"/>
-        </svg>         
+      </svg>
+      <div class="main-header__menu-popup">
+        <div class="menu-popup__btn-close">
+          <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="-0.5" x2="27.5267" y2="-0.5" transform="matrix(0.726583 -0.687078 0.719436 0.694559 1 19.9995)" stroke="#0F1319"/>
+            <line y1="-0.5" x2="27.5202" y2="-0.5" transform="matrix(-0.72304 -0.690806 0.723 -0.690848 20.9316 19.0112)" stroke="#0F1319"/>
+          </svg>   
+        </div>
+        <div class="menu-popup_row">
+          <a class="additional-text" href="https://main.liis.su ">Главная ЛИИС</a>
+          <a class="additional-text" href="">Simple Office</a>
+        </div>
+        <div class="menu-popup_row">
+          <a class="additional-text" href="https://simplehome.liis.su">Simple Home</a>
+          <a class="additional-text" href="">Simple Media</a>
+        </div>
+        <a class="additional-text phone" href="tel: +7 (812) 241 12 73">Спб: +7 (812) 241 12 73</a> 
+      </div>     
     </div>
     <div class="menu-item app draggable">
       <a class="additional-text" href="#app">Приложение</a> 
@@ -807,18 +825,31 @@
           : mainHeader.classList.remove('active')
       })
 
-      const burgerMenu = document.querySelector('.main-header__menu')
-      const menuItem = document.querySelector('.menu')
-      const popupMenu = document.querySelector('.main-header__menu-popup')
-      const btnClosePopupMenu = document.querySelector('.menu-popup__btn-close')
-      burgerMenu.onclick = () => {
-        popupMenu.classList.toggle('active')
-      }
+      const popupMenu = document.querySelectorAll('.main-header__menu-popup')
+      const btnClosePopupMenu = document.querySelectorAll('.menu-popup__btn-close')
 
-      btnClosePopupMenu.onclick = () => {
-        popupMenu.classList.remove('active')
+      document.addEventListener('click', (e) => {
+        if (e.target.closest('.menu')) {
+          popupMenu[1].classList.toggle('active')
+          popupMenu[1].style.zIndex = zIndex + 1
+          return
+        }
+        if (e.target.closest('.main-header__menu')) {
+          popupMenu[0].classList.toggle('active')
+          return
+        }
+        if (!e.target.closest('.main-header__menu-popup')) {
+          popupMenu[0].classList.contains('active') && popupMenu[0].classList.remove('active')
+          popupMenu[1].classList.contains('active') && popupMenu[1].classList.remove('active')
+        }
+      })
+      btnClosePopupMenu[0].onclick = () => {
+        popupMenu[0].classList.remove('active')
       }
-
+      btnClosePopupMenu[1].onclick = (e) => {
+        e.stopPropagation()
+        popupMenu[1].classList.remove('active')
+      }
   </script>
 </body>
 </html>
