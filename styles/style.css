@@ -3970,6 +3970,7 @@ ul {
     width: calc(100% - 2rem);
     max-width: 32rem;
     padding-bottom: 8rem;
+    margin-top: 5rem;
   }
   .testing-system::before {
     display: none;
