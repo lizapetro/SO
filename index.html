@@ -188,7 +188,10 @@
     <h6>Сотрудникам</h6>
     <h3><span class="text_blue">Мобильное приложение</span>  позволяет:</h3>
     <div class="mobile-app__features">
-      <img src="./assets/images/mobile-phone.png" alt="">
+      <div class="mobile-iframe__wrapper">
+        <iframe src="https://www.youtube.com/embed/7lP40Me5XiA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
       <div>
         <div class="features-item main-text">
           Бронировать рабочие места на <br>короткий срок и длительный срок
@@ -217,7 +220,10 @@
       <span class="text_blue">Панель бронирования</span> позволяет:
     </h3>
     <div class="booking-panel-staff__features">
-      <img src="./assets/images/tablet.png" alt="">
+      <div class="iframe-tablet__wrapper">
+        <iframe src="https://www.youtube.com/embed/YYIaQOL4cew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
       <div>
         <div class="features-item main-text">
           Забронировать переговорную <br>комнату
@@ -267,7 +273,10 @@
           Просмотр статистики бронирования, аналитики нагрузки на офис
         </span>
       </div>
-      <img src="./assets/images/tablet-2.png" alt="">
+      <div class="iframe-tablet-manager__wrapper">
+        <iframe src="https://www.youtube.com/embed/0kXC8ime9QM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
     </div>
   </section>
 
@@ -799,11 +808,13 @@
       })
 
       const burgerMenu = document.querySelector('.main-header__menu')
+      const menuItem = document.querySelector('.menu')
       const popupMenu = document.querySelector('.main-header__menu-popup')
       const btnClosePopupMenu = document.querySelector('.menu-popup__btn-close')
       burgerMenu.onclick = () => {
         popupMenu.classList.toggle('active')
       }
+
       btnClosePopupMenu.onclick = () => {
         popupMenu.classList.remove('active')
       }
