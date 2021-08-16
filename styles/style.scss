@@ -101,6 +101,11 @@
                 &:nth-child(2) {
                     margin-bottom: 3.7rem;
                     a {
+                        &:first-child {
+                            &:hover {
+                                color: $blue2;
+                            }
+                        }
                         &:last-child {
                             &:hover {
                                 color: $blue2;
@@ -144,6 +149,9 @@
     .draggable {
         position: absolute;
         cursor: grab;
+        &:hover {
+            cursor: grab
+        }
     }
     .simple-office {
         padding: 1.7rem 2rem;
@@ -2071,6 +2079,7 @@
                     font-weight: 400;
                 }
                 .info-item__price {
+                    border-radius: 15px;
                     div {
                         margin-top: 1.5rem;
                     }
@@ -2463,13 +2472,17 @@
         }
     }
     .main-header__menu-popup {
+        position: fixed;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 39.9rem;
-        height: 49.8rem;
-        border-radius: 10px;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
         padding: 0;
+        top: 0;
+        left: 0;
+        z-index: 1000;
         &::before,
         &::after {
             content: '';
@@ -2762,12 +2775,14 @@
             margin-bottom: 3.4rem;
         }
         .iframe-tablet__wrapper {
-            width: 30rem;
-            height: 20rem;
+            width: 36.5rem;
+            height: 27.7rem;
             margin-bottom: 5rem;
+            border-radius: 15px;
             iframe {
-                width:28rem;
-                height: 18rem;
+                width: 34.2rem;
+                height: 25.7rem;
+                border-radius: 11.95px;
             }
         }
         &__features {
@@ -2775,6 +2790,7 @@
             flex-direction: column;
             justify-content: center;
             padding-top: 0;
+            max-width: 30rem;
             .features-item  {
                 position: static;
                 width: 100%;
@@ -2810,13 +2826,17 @@
             width: 100%;
         }
         .iframe-tablet-manager__wrapper {
-            width: 30rem;
-            height: 20rem;
+            min-width: 36.5rem;
+            height: 27.7rem;
             margin-top: 5rem;
+            background: #0F1319;
+            box-shadow: -0.735004px 12.0051px 24.5001px rgba(62, 68, 128, 0.25), inset -0.490003px -2.45001px 4.90003px rgba(102, 131, 188, 0.25), inset 2.45001px 0.490003px 4.90003px #212833;
             border-radius: 15px;
+            align-items: center;
+            justify-content: center;
             iframe {
-                width: 28rem;
-                height: 18rem;
+                width: 34.2rem;
+                height: 25.7rem;
                 border-radius: 10px;
             }
         }
@@ -3586,15 +3606,13 @@
         }
     }
     .main-header__menu-popup {
-        width: 30rem;
-        height: 50rem;
-        border-radius: 10px;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
         padding: 0;
-        right: 0;
-        &::before {
-            top: 0.5rem;
-            left: 1.7rem;
-        }
+        left: 0;
+        top: 0;
+        &::before,
         &::after {
             display: none;
         }

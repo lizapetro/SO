@@ -159,7 +159,7 @@ button::hover {
 }
 
 .text_blue {
-  color: #3DBBEE;
+  color: #66D1FC;
 }
 
 input {
@@ -173,6 +173,7 @@ input {
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 140%;
+  outline-color: #66D1FC;
 }
 
 input::-webkit-input-placeholder {
@@ -193,6 +194,10 @@ input::-ms-input-placeholder {
 input::placeholder {
   color: #8C8C8C;
   font-weight: 400;
+}
+
+input.error {
+  background-color: rgba(243, 76, 56, 0.1);
 }
 
 a {
@@ -231,7 +236,7 @@ ul {
 
 @media (max-width: 1300px) {
   html {
-    font-size: 50%;
+    font-size: 48%;
   }
 }
 
@@ -481,7 +486,7 @@ ul {
 }
 
 .main-header__contacts .contacts__social-network svg:hover path {
-  fill: #3DBBEE;
+  fill: #66D1FC;
 }
 
 .main-header__menu {
@@ -531,8 +536,12 @@ ul {
   margin-bottom: 3.7rem;
 }
 
+.main-header__menu-popup .menu-popup_row:nth-child(2) a:first-child:hover {
+  color: #66D1FC;
+}
+
 .main-header__menu-popup .menu-popup_row:nth-child(2) a:last-child:hover {
-  color: #3DBBEE;
+  color: #66D1FC;
 }
 
 .main-header__menu-popup .menu-popup_row:nth-child(3) a:first-child:hover {
@@ -568,9 +577,14 @@ ul {
   cursor: grab;
 }
 
+.draggable-block .draggable:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
 .draggable-block .simple-office {
   padding: 1.7rem 2rem;
-  border: 1px solid #3DBBEE;
+  border: 1px solid #66D1FC;
   border-radius: 13px;
   position: absolute;
   background-color: #FFFFFF;
@@ -720,7 +734,7 @@ ul {
   width: 6rem;
   height: 22.3rem;
   border-radius: 6px 0 0 6px;
-  background-color: #3DBBEE;
+  background-color: #66D1FC;
   color: #FFFFFF;
   padding: 2rem 0 3.2rem;
   top: 15.6rem;
@@ -977,7 +991,7 @@ ul {
 
 .features-item_blue {
   background: rgba(255, 255, 255, 0.42);
-  border-color: #3DBBEE;
+  border-color: #66D1FC;
 }
 
 .mobile-app {
@@ -1725,7 +1739,7 @@ ul {
 .additional-modules__line > div {
   height: 12rem;
   background: #FFFFFF;
-  border: 1px solid #3DBBEE;
+  border: 1px solid #66D1FC;
   -webkit-filter: blur(0);
           filter: blur(0);
   margin-right: 3rem;
@@ -1775,7 +1789,7 @@ ul {
   display: block;
   width: 100%;
   height: calc(100% / 2 - 1px);
-  border: 1px solid #3DBBEE;
+  border: 1px solid #66D1FC;
   border-radius: 8rem;
   position: absolute;
   z-index: -1;
@@ -1788,7 +1802,7 @@ ul {
   display: block;
   width: 100%;
   height: calc(100% / 2 - 1px);
-  border: 1px solid #3DBBEE;
+  border: 1px solid #66D1FC;
   border-radius: 8rem;
   position: absolute;
   z-index: -1;
@@ -2139,7 +2153,7 @@ ul {
 .testing-system button {
   margin-top: 7rem;
   width: 49rem;
-  background-color: #3DBBEE;
+  background-color: #66D1FC;
   color: white;
 }
 
@@ -2348,7 +2362,7 @@ ul {
 }
 
 .company-info__links .link-to-simple-office {
-  color: #3DBBEE;
+  color: #66D1FC;
 }
 
 .company-info__links .link-to-simple-media {
@@ -2913,6 +2927,9 @@ ul {
   .price__info-item h2 {
     font-weight: 400;
   }
+  .price__info-item .info-item__price {
+    border-radius: 15px;
+  }
   .price__info-item .info-item__price div {
     margin-top: 1.5rem;
   }
@@ -3193,7 +3210,7 @@ ul {
     border-left: 0;
   }
   .additional-modules__line:nth-child(3) > div:last-child {
-    border: 1px solid #3DBBEE;
+    border: 1px solid #66D1FC;
     border-radius: 20px;
   }
   .draggable-block .platform {
@@ -3296,6 +3313,7 @@ ul {
     left: calc(50% - 35rem);
   }
   .main-header__menu-popup {
+    position: fixed;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -3306,10 +3324,13 @@ ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 39.9rem;
-    height: 49.8rem;
-    border-radius: 10px;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
     padding: 0;
+    top: 0;
+    left: 0;
+    z-index: 1000;
   }
   .main-header__menu-popup::before, .main-header__menu-popup::after {
     content: '';
@@ -3344,7 +3365,7 @@ ul {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 10px;
-    border: 1px solid #3DBBEE;
+    border: 1px solid #66D1FC;
     top: 1.6rem;
     right: 1.6rem;
   }
@@ -3357,7 +3378,7 @@ ul {
     margin: 0 !important;
   }
   .main-header__menu-popup .menu-popup_row:nth-child(2) a:last-child {
-    color: #3DBBEE;
+    color: #66D1FC;
   }
   .main-header__menu-popup .menu-popup_row:nth-child(3) a:first-child {
     color: #FF7819;
@@ -3579,13 +3600,15 @@ ul {
     margin-bottom: 3.4rem;
   }
   .booking-panel-staff .iframe-tablet__wrapper {
-    width: 30rem;
-    height: 20rem;
+    width: 36.5rem;
+    height: 27.7rem;
     margin-bottom: 5rem;
+    border-radius: 15px;
   }
   .booking-panel-staff .iframe-tablet__wrapper iframe {
-    width: 28rem;
-    height: 18rem;
+    width: 34.2rem;
+    height: 25.7rem;
+    border-radius: 11.95px;
   }
   .booking-panel-staff__features {
     display: -webkit-box;
@@ -3599,6 +3622,7 @@ ul {
         -ms-flex-pack: center;
             justify-content: center;
     padding-top: 0;
+    max-width: 30rem;
   }
   .booking-panel-staff__features .features-item {
     position: static;
@@ -3632,14 +3656,23 @@ ul {
     width: 100%;
   }
   .booking-panel-manager .iframe-tablet-manager__wrapper {
-    width: 30rem;
-    height: 20rem;
+    min-width: 36.5rem;
+    height: 27.7rem;
     margin-top: 5rem;
+    background: #0F1319;
+    -webkit-box-shadow: -0.735px 12.0051px 24.5001px rgba(62, 68, 128, 0.25), inset -0.49px -2.45001px 4.90003px rgba(102, 131, 188, 0.25), inset 2.45001px 0.49px 4.90003px #212833;
+            box-shadow: -0.735px 12.0051px 24.5001px rgba(62, 68, 128, 0.25), inset -0.49px -2.45001px 4.90003px rgba(102, 131, 188, 0.25), inset 2.45001px 0.49px 4.90003px #212833;
     border-radius: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .booking-panel-manager .iframe-tablet-manager__wrapper iframe {
-    width: 28rem;
-    height: 18rem;
+    width: 34.2rem;
+    height: 25.7rem;
     border-radius: 10px;
   }
   .booking-panel-manager__features::before, .booking-panel-manager__features::after {
@@ -4276,7 +4309,7 @@ ul {
   }
   .additional-modules__line:nth-child(2) > div:first-child {
     width: initial;
-    border: 1px solid #3DBBEE;
+    border: 1px solid #66D1FC;
     border-radius: 20px;
   }
   .additional-modules__line:nth-child(2) > div:last-child {
@@ -4315,7 +4348,7 @@ ul {
   }
   .additional-modules__line:nth-child(4) > div:first-child {
     border-radius: 20px;
-    border: 1px solid #3DBBEE;
+    border: 1px solid #66D1FC;
   }
   .additional-modules__line:nth-child(4) > div:last-child {
     border-radius: 20px 0  0 20px;
@@ -4350,7 +4383,7 @@ ul {
   }
   .additional-modules__line:nth-child(6) > div:last-child {
     border-radius: 20px;
-    border: 1px solid #3DBBEE;
+    border: 1px solid #66D1FC;
     padding: 0 1rem;
     margin: 0;
   }
@@ -4468,17 +4501,14 @@ ul {
     left: calc(50% + 8rem);
   }
   .main-header__menu-popup {
-    width: 30rem;
-    height: 50rem;
-    border-radius: 10px;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
     padding: 0;
-    right: 0;
+    left: 0;
+    top: 0;
   }
-  .main-header__menu-popup::before {
-    top: 0.5rem;
-    left: 1.7rem;
-  }
-  .main-header__menu-popup::after {
+  .main-header__menu-popup::before, .main-header__menu-popup::after {
     display: none;
   }
   .main-header__menu-popup a {

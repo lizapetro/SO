@@ -159,7 +159,7 @@ button::hover {
 }
 
 .text_blue {
-  color: #3DBBEE;
+  color: #66D1FC;
 }
 
 input {
@@ -173,6 +173,7 @@ input {
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 140%;
+  outline-color: #66D1FC;
 }
 
 input::-webkit-input-placeholder {
@@ -193,6 +194,10 @@ input::-ms-input-placeholder {
 input::placeholder {
   color: #8C8C8C;
   font-weight: 400;
+}
+
+input.error {
+  background-color: rgba(243, 76, 56, 0.1);
 }
 
 a {
@@ -231,7 +236,7 @@ ul {
 
 @media (max-width: 1300px) {
   html {
-    font-size: 50%;
+    font-size: 48%;
   }
 }
 

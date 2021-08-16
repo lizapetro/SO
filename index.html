@@ -239,7 +239,8 @@
     </h3>
     <div class="booking-panel-staff__features">
       <div class="iframe-tablet__wrapper">
-        <iframe src="https://www.youtube.com/embed/YYIaQOL4cew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        <iframe 
+        src="https://www.youtube.com/embed/A2darw6akt0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
         </iframe>
       </div>
       <div>
@@ -640,12 +641,12 @@
     <form class='testing-system__form' action="">
       <h3>Хотите протестировать сиcтему?</h3>
       <div class="testing-system__fields">
-        <input class="main-text" type="text" placeholder="Имя">
+        <input class="main-text" type="text" placeholder="Имя" required>
         <input class="main-text" type="text" placeholder="Телефон">
       </div>
       <div class="testing-system__fields">
-        <input class="main-text" type="text" placeholder="Компания">
-        <input class="main-text" type="text" placeholder="E-mail">
+        <input class="main-text" type="text" placeholder="Компания" required>
+        <input class="main-text" type="text" placeholder="E-mail" required>
       </div>
       <button type='submit' class="complete-request">Оставить заявку</button>
     </form>
@@ -733,15 +734,15 @@
           <line y1="-0.5" x2="27.5202" y2="-0.5" transform="matrix(-0.72304 -0.690806 0.723 -0.690848 20.9316 19.0112)" stroke="white"/>
         </svg>          
       </div>
-      <form action="" method="POST">
+      <form class='pop-up__testing-system-form' action="" method="POST">
         <h3>Хотите протестировать сиcтему?</h3>
         <div class="testing-system__row">
-          <input type="text" placeholder="Имя">
+          <input type="text" placeholder="Имя" required>
           <input type="text" placeholder="Телефон">
         </div>
         <div class="testing-system__row">
-          <input type="text" placeholder="Компания">
-          <input type="text" placeholder="E-mail">
+          <input type="text" placeholder="Компания" required>
+          <input type="text" placeholder="E-mail" required>
         </div>
         <button class='create-request' type='submit'>Оставить заявку</button>
       </form>
@@ -759,12 +760,13 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.12/lib/draggable.js"></script>
   <script>
-    const draggable = new Draggable.default(document.querySelectorAll('.draggable-block'), {
-      // delay: 150,
-      draggable: '.draggable',
-      distance: 2
-    });
-      let zIndex = 1;
+    let zIndex = 1;
+    if (window.innerWidth > 1024) {
+      const draggable = new Draggable.default(document.querySelectorAll('.draggable-block'), {
+        // delay: 150,
+        draggable: '.draggable',
+        distance: 1
+      });
 
       draggable.on('mirror:created', ({ mirror, dragEvent, source, ...props }) => {
         mirror.style.zIndex = zIndex
@@ -781,29 +783,58 @@
           dragEvent.originalSource.style.zIndex = zIndex
         }
       })
+    }
+    const checkRequiredFields = (form) => {
+      const fields = form.querySelectorAll('input')
+      let haveEmptyField = false
+      fields.forEach(field => {
+        if (field.required && !field.value) {
+          field.classList.add('error')
+          haveEmptyField = true
+        } else {
+          field.classList.remove('error')
+        }
+      })
+      return haveEmptyField
+    }
+
+      // const createRequestBtn = document.querySelector('.create-request')
+      // const testingForm = document.querySelector('form.testing-system__form')
+      // console.log(testingForm)
+      // createRequestBtn.onclick = () => {
+      //   if (!checkRequiredFields(testingForm)) {
+      //     popup.classList.add('complete')
+      //   }
+      //   return false
+      // }
 
       const buttonTestSystem = document.querySelector('.test-simple-office__btn')
       const popup = document.querySelector('.pop-up__testing-system')
       const closeBtn = document.querySelector('.close-btn')
       buttonTestSystem.onclick = () => {
         popup.classList.add('active')
-        zIndex = zIndex + 1
-        popup.style.zIndex = zIndex
+        popup.style.zIndex = 1001
       }
       closeBtn.onclick = () => {
         popup.classList.remove('active')
       }
 
+      const form = document.querySelector('.pop-up__testing-system-form')
       const createRequestBtn = document.querySelector('.create-request')
       createRequestBtn.onclick = () => {
-        popup.classList.add('complete')
+        if (!checkRequiredFields(form)) {
+          popup.classList.add('complete')
+        }
         return false
       }
 
       const testimgSystemBlock = document.querySelector('.testing-system')
+      const form2 = document.querySelector('.testing-system__form')
       const completeBtn = document.querySelector('.complete-request')
       completeBtn.onclick = () => {
-        testimgSystemBlock.classList.add('complete')
+        if (!checkRequiredFields(form2)) {
+          testimgSystemBlock.classList.add('complete')
+        }
         return false
       }
 
