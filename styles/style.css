@@ -1162,8 +1162,8 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 73rem;
-  height: 51rem;
+  width: 63.5rem;
+  height: 48.5rem;
   border-radius: 40px;
   background: #F6F7FA;
   -webkit-box-shadow: 30.7941px 46.1912px 61.5883px rgba(62, 68, 128, 0.25), inset -1.53971px -7.69853px 15.3971px rgba(102, 131, 188, 0.25), inset 7.69853px 1.53971px 15.3971px #FFFFFF;
@@ -1171,8 +1171,8 @@ ul {
 }
 
 .booking-panel-staff .iframe-tablet__wrapper iframe {
-  width: 70rem;
-  height: 48rem;
+  width: 60.2rem;
+  height: 45.2rem;
   border-radius: 24.7px;
 }
 
