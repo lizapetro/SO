@@ -571,7 +571,7 @@
 }
 
 .booking-panel-staff {
-    padding: 15rem 0 23.7rem;
+    padding: 15rem 0 0;
     h6 {
         align-self: flex-end;
         position: relative;
@@ -607,7 +607,7 @@
         background: #F6F7FA;
         box-shadow: 30.7941px 46.1912px 61.5883px rgba(62, 68, 128, 0.25), inset -1.53971px -7.69853px 15.3971px rgba(102, 131, 188, 0.25), inset 7.69853px 1.53971px 15.3971px #FFFFFF;
         iframe {
-            width: 60.2rem;
+            width: 60.3rem;
             height: 45.2rem;
             border-radius: 24.7px;
         }
@@ -650,6 +650,7 @@
 }
 
 .booking-panel-manager {
+    padding-top: 23.7rem;
     & > h6 {
         align-self: flex-end;
         position: relative;
@@ -1078,9 +1079,9 @@
         & > div {
             height: 12rem;
             background: $white;
-            border: 1px solid $blue2;
-            filter: blur(0);
+            border: 1px solid $blue2;	
             margin-right: 3rem;
+            background-color: rgba(255, 255, 255, 0.42);
             h5 {
                 margin-right: 2rem;
             }
@@ -1090,6 +1091,7 @@
                 display: flex;
                 align-items: center;
                 padding: 0 4.5rem;
+                position: relative;
             }
             &.with-border {
                 display: flex;
@@ -1099,8 +1101,7 @@
             &.with-special-border {
                 border: none;
                 position: relative;
-                background-color: transparent;
-                background-color: $white;
+                // background-color: transparent;
                 padding: 1rem 2.7rem 1rem 2.9rem;
                 display: flex;
                 align-items: center;
@@ -1133,6 +1134,7 @@
                     display: flex;
                     align-items: center;
                     padding: 0 2rem;
+                    border-radius: 50%;
                 }
             }
         }
@@ -1151,6 +1153,20 @@
         .block-4 {
             max-width: 31rem;
             width: 31rem;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                background-image: url(../assets/icons/decoration-blue.png);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                width: 26rem;
+                height: 21.1rem;
+                z-index: -1;
+                left: -232px;
+                top: -136px;
+            }
         }
         .block-5 {
             max-width: 36rem;
@@ -1162,8 +1178,22 @@
             flex-direction: column;
             align-items: flex-start !important;
             justify-content: center;
+            position: relative;
             h5 {
                 margin-bottom: 0.7rem;
+            }
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                background-image: url(../assets/icons/decoration-blue-2.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                width: 153.45px;
+                height: 125.25px;
+                z-index: -1;
+                right: -115.52px;
+                top: -104px;
             }
         }
         &:first-child {
@@ -1875,6 +1905,14 @@
                 }
             }
         }
+        .iframe-tablet-manager__wrapper {
+            width: 72.8rem;
+            height: 42.2rem;
+            iframe {
+                width: 69.6rem;
+                height: 38.7rem;
+            }
+        }
     }
 
     .booking-panel-manager {
@@ -2300,6 +2338,13 @@
             .block-4 {
                 max-width: 25rem;
                 width: 25rem;
+                &::before {
+                    background-image: url('../assets/icons/decoration-blue-2.png');
+                    width: 153px;
+                    height: 125px;
+                    top: -14px;
+                    left: 173px;
+                }
             }
             .block-5 {
                 max-width: 32rem;
@@ -2314,12 +2359,29 @@
                 h5 {
                     margin-bottom: 0;
                 }
+                &::before {
+                    display: none;
+                }
             }
             &:first-child {
                 & > div {
                     &:first-child {
                         width: 6.5rem;
                         border-left: 0;
+                        position: relative;
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            background-image: url(../assets/icons/decoration-blue.png);
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            width: 217px;
+                            height: 176px;
+                            z-index: -1;
+                            left: -15px;
+                            top: 0;
+                        }   
                     }
                     &:last-child {
                         width: initial;
@@ -2759,7 +2821,6 @@
     .booking-panel-staff {
         width: calc(100% - 2rem);
         max-width: 32rem;
-        padding-bottom: 9rem;
         padding-top: 9rem;
         h6 {
             margin-right: 2.3rem;
@@ -2775,13 +2836,13 @@
             margin-bottom: 3.4rem;
         }
         .iframe-tablet__wrapper {
-            width: 36.5rem;
-            height: 27.7rem;
+            width: 33.369rem;
+            height: 25.487rem;
             margin-bottom: 5rem;
             border-radius: 15px;
             iframe {
-                width: 34.2rem;
-                height: 25.7rem;
+                width: 31.635rem;
+                height: 23.752rem;
                 border-radius: 11.95px;
             }
         }
@@ -2808,6 +2869,7 @@
         }
     }
     .booking-panel-manager {
+        padding-top: 9rem;
         width: calc(100% - 2rem);
         max-width: 32rem;
         & > h6 {
@@ -3360,10 +3422,37 @@
             .block-1 {
                 max-width: 26rem;
                 width: 26rem !important;
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 100% !important;
+                    height: calc(100% / 2 - 1px) !important;
+                    border: 1px solid $blue2;
+                    border-radius: 8rem;
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: 0 !important;
+                    background-image: none !important;
+                }
             }
             .block-2 {
                 max-width: 30rem;
                 width: 30rem;
+                position: relative;
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    background-image: url(../assets/icons/decoration-blue.png);
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    width: 213px;
+                    height: 173px;
+                    z-index: -1;
+                    right: 110px;
+                    top: 41px;
+                }  
             }
             .block-3 {
                 max-width: 21rem;
@@ -3376,6 +3465,14 @@
                 flex-direction: row;
                 align-items: center !important;
                 justify-content: initial;
+                &::before {
+                    width: 147.64px;
+                    height: 113.7px;
+                    top: calc(100% + 23px);
+                    right: -50px;
+                    left: auto;
+                    transform: rotate(-15.94deg)
+                }
             }
             .block-5 {
                 max-width: 29rem;

@@ -159,7 +159,7 @@ button::hover {
 }
 
 .text_blue {
-  color: #66D1FC;
+  color: #33ccff;
 }
 
 input {
@@ -173,7 +173,7 @@ input {
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 140%;
-  outline-color: #66D1FC;
+  outline-color: #33ccff;
 }
 
 input::-webkit-input-placeholder {
