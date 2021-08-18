@@ -67,6 +67,7 @@
           <a class="additional-text" href="https://simplehome.liis.su">Simple Home</a>
           <a class="additional-text" href="">Simple Media</a>
         </div>
+        <a class="additional-text phone" href="tel: +7 (812) 241 12 73">Спб: +7 (812) 241 12 73</a> 
       </div>
     </div>
 
@@ -87,14 +88,31 @@
       <a href="#main" class="additional-text">Главная</a>
     </div>
     <div class="menu-item admin draggable">
-      <a class="additional-text" href="">Администрирование</a>
+      <a class="additional-text" href="#booking-panel-manager">Администрирование</a>
     </div>
     <div class="menu-item menu draggable">
       <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="25" height="1.53846" fill="#0F1319"/>
         <rect y="9.2312" width="25" height="1.53846" fill="#0F1319"/>
         <rect y="18.4614" width="25" height="1.53846" fill="#0F1319"/>
-        </svg>         
+      </svg>
+      <div class="main-header__menu-popup">
+        <div class="menu-popup__btn-close">
+          <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="-0.5" x2="27.5267" y2="-0.5" transform="matrix(0.726583 -0.687078 0.719436 0.694559 1 19.9995)" stroke="#0F1319"/>
+            <line y1="-0.5" x2="27.5202" y2="-0.5" transform="matrix(-0.72304 -0.690806 0.723 -0.690848 20.9316 19.0112)" stroke="#0F1319"/>
+          </svg>   
+        </div>
+        <div class="menu-popup_row">
+          <a class="additional-text" href="https://main.liis.su ">Главная ЛИИС</a>
+          <a class="additional-text" href="">Simple Office</a>
+        </div>
+        <div class="menu-popup_row">
+          <a class="additional-text" href="https://simplehome.liis.su">Simple Home</a>
+          <a class="additional-text" href="">Simple Media</a>
+        </div>
+        <a class="additional-text phone" href="tel: +7 (812) 241 12 73">Спб: +7 (812) 241 12 73</a> 
+      </div>     
     </div>
     <div class="menu-item app draggable">
       <a class="additional-text" href="#app">Приложение</a> 
@@ -221,7 +239,8 @@
     </h3>
     <div class="booking-panel-staff__features">
       <div class="iframe-tablet__wrapper">
-        <iframe src="https://www.youtube.com/embed/YYIaQOL4cew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        <iframe 
+        src="https://www.youtube.com/embed/A2darw6akt0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
         </iframe>
       </div>
       <div>
@@ -243,7 +262,7 @@
 
   <!-- BOOKING PANEL MANAGER -->
 
-  <section class="booking-panel-manager feature-block">
+  <section id="booking-panel-manager" class="booking-panel-manager feature-block">
     <h6>Руководителям</h6>
     <h3>
       <span class="text_blue">Панель бронирования</span> позволяет:
@@ -622,12 +641,12 @@
     <form class='testing-system__form' action="">
       <h3>Хотите протестировать сиcтему?</h3>
       <div class="testing-system__fields">
-        <input class="main-text" type="text" placeholder="Имя">
+        <input class="main-text" type="text" placeholder="Имя" required>
         <input class="main-text" type="text" placeholder="Телефон">
       </div>
       <div class="testing-system__fields">
-        <input class="main-text" type="text" placeholder="Компания">
-        <input class="main-text" type="text" placeholder="E-mail">
+        <input class="main-text" type="text" placeholder="Компания" required>
+        <input class="main-text" type="text" placeholder="E-mail" required>
       </div>
       <button type='submit' class="complete-request">Оставить заявку</button>
     </form>
@@ -715,15 +734,15 @@
           <line y1="-0.5" x2="27.5202" y2="-0.5" transform="matrix(-0.72304 -0.690806 0.723 -0.690848 20.9316 19.0112)" stroke="white"/>
         </svg>          
       </div>
-      <form action="" method="POST">
+      <form class='pop-up__testing-system-form' action="" method="POST">
         <h3>Хотите протестировать сиcтему?</h3>
         <div class="testing-system__row">
-          <input type="text" placeholder="Имя">
+          <input type="text" placeholder="Имя" required>
           <input type="text" placeholder="Телефон">
         </div>
         <div class="testing-system__row">
-          <input type="text" placeholder="Компания">
-          <input type="text" placeholder="E-mail">
+          <input type="text" placeholder="Компания" required>
+          <input type="text" placeholder="E-mail" required>
         </div>
         <button class='create-request' type='submit'>Оставить заявку</button>
       </form>
@@ -741,12 +760,13 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.12/lib/draggable.js"></script>
   <script>
-    const draggable = new Draggable.default(document.querySelectorAll('.draggable-block'), {
-      // delay: 150,
-      draggable: '.draggable',
-      distance: 2
-    });
-      let zIndex = 1;
+    let zIndex = 1;
+    if (window.innerWidth > 1024) {
+      const draggable = new Draggable.default(document.querySelectorAll('.draggable-block'), {
+        // delay: 150,
+        draggable: '.draggable',
+        distance: 1
+      });
 
       draggable.on('mirror:created', ({ mirror, dragEvent, source, ...props }) => {
         mirror.style.zIndex = zIndex
@@ -763,29 +783,58 @@
           dragEvent.originalSource.style.zIndex = zIndex
         }
       })
+    }
+    const checkRequiredFields = (form) => {
+      const fields = form.querySelectorAll('input')
+      let haveEmptyField = false
+      fields.forEach(field => {
+        if (field.required && !field.value) {
+          field.classList.add('error')
+          haveEmptyField = true
+        } else {
+          field.classList.remove('error')
+        }
+      })
+      return haveEmptyField
+    }
+
+      // const createRequestBtn = document.querySelector('.create-request')
+      // const testingForm = document.querySelector('form.testing-system__form')
+      // console.log(testingForm)
+      // createRequestBtn.onclick = () => {
+      //   if (!checkRequiredFields(testingForm)) {
+      //     popup.classList.add('complete')
+      //   }
+      //   return false
+      // }
 
       const buttonTestSystem = document.querySelector('.test-simple-office__btn')
       const popup = document.querySelector('.pop-up__testing-system')
       const closeBtn = document.querySelector('.close-btn')
       buttonTestSystem.onclick = () => {
         popup.classList.add('active')
-        zIndex = zIndex + 1
-        popup.style.zIndex = zIndex
+        popup.style.zIndex = 1001
       }
       closeBtn.onclick = () => {
         popup.classList.remove('active')
       }
 
+      const form = document.querySelector('.pop-up__testing-system-form')
       const createRequestBtn = document.querySelector('.create-request')
       createRequestBtn.onclick = () => {
-        popup.classList.add('complete')
+        if (!checkRequiredFields(form)) {
+          popup.classList.add('complete')
+        }
         return false
       }
 
       const testimgSystemBlock = document.querySelector('.testing-system')
+      const form2 = document.querySelector('.testing-system__form')
       const completeBtn = document.querySelector('.complete-request')
       completeBtn.onclick = () => {
-        testimgSystemBlock.classList.add('complete')
+        if (!checkRequiredFields(form2)) {
+          testimgSystemBlock.classList.add('complete')
+        }
         return false
       }
 
@@ -807,18 +856,31 @@
           : mainHeader.classList.remove('active')
       })
 
-      const burgerMenu = document.querySelector('.main-header__menu')
-      const menuItem = document.querySelector('.menu')
-      const popupMenu = document.querySelector('.main-header__menu-popup')
-      const btnClosePopupMenu = document.querySelector('.menu-popup__btn-close')
-      burgerMenu.onclick = () => {
-        popupMenu.classList.toggle('active')
-      }
+      const popupMenu = document.querySelectorAll('.main-header__menu-popup')
+      const btnClosePopupMenu = document.querySelectorAll('.menu-popup__btn-close')
 
-      btnClosePopupMenu.onclick = () => {
-        popupMenu.classList.remove('active')
+      document.addEventListener('click', (e) => {
+        if (e.target.closest('.menu')) {
+          popupMenu[1].classList.toggle('active')
+          popupMenu[1].style.zIndex = zIndex + 1
+          return
+        }
+        if (e.target.closest('.main-header__menu')) {
+          popupMenu[0].classList.toggle('active')
+          return
+        }
+        if (!e.target.closest('.main-header__menu-popup')) {
+          popupMenu[0].classList.contains('active') && popupMenu[0].classList.remove('active')
+          popupMenu[1].classList.contains('active') && popupMenu[1].classList.remove('active')
+        }
+      })
+      btnClosePopupMenu[0].onclick = () => {
+        popupMenu[0].classList.remove('active')
       }
-
+      btnClosePopupMenu[1].onclick = (e) => {
+        e.stopPropagation()
+        popupMenu[1].classList.remove('active')
+      }
   </script>
 </body>
 </html>

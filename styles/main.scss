@@ -157,9 +157,13 @@ input {
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 140%;
+    outline-color: $blue2;
     &::placeholder {
         color: $gray;
         font-weight: 400;
+    }
+    &.error {
+        background-color: rgba(243, 76, 56, 0.1);
     }
 }
 
@@ -195,7 +199,7 @@ ul {
 
 @media (max-width: 1300px) {
     html {
-        font-size: 50%;
+        font-size: 48%;
     }
 } 
 
