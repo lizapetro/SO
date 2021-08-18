@@ -1062,8 +1062,8 @@ ul {
 }
 
 .mobile-app__features .mobile-iframe__wrapper iframe {
-  width: 350px;
-  height: 760px;
+  width: 351px;
+  height: 759px;
   border-radius: 35px;
 }
 
@@ -1231,7 +1231,7 @@ ul {
 }
 
 .booking-panel-manager {
-  padding-top: 23.7rem;
+  padding-top: 38.9rem;
 }
 
 .booking-panel-manager > h6 {
@@ -2721,8 +2721,8 @@ ul {
             box-shadow: 31.5482px 47.3223px 63.0964px rgba(62, 68, 128, 0.25), inset -1.57741px -7.88705px 15.7741px rgba(102, 131, 188, 0.25), inset 7.88705px 1.57741px 15.7741px #FFFFFF;
   }
   .mobile-app__features .mobile-iframe__wrapper iframe {
-    width: 29.8rem;
-    height: 64.5rem;
+    width: 223px;
+    height: 482px;
     border-radius: 30px;
   }
   .mobile-app__features .features-item {
@@ -2806,6 +2806,7 @@ ul {
   .booking-panel-manager {
     width: calc(100% - 4rem);
     max-width: 76.8rem;
+    padding-top: 23.7rem;
   }
   .booking-panel-manager > h6 {
     margin-right: 2.8rem;
