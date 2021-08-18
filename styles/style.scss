@@ -1042,6 +1042,26 @@
     }
     h4 {
         margin: 0 0 9.4rem;
+        .decor {
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                background-image: url(../assets/icons/word-decor.svg);
+                background-repeat: no-repeat;
+                width: 36px;
+                height: 20px;
+                position: absolute;
+                left: -5px;
+                top: -2px;
+            }
+            &:last-child {
+                &::before {
+                    transform: rotate(180deg);
+                    top: calc(100% - 11px);
+                }
+            }
+        }
     }
     &__features {
         width: 100vw;
@@ -2161,6 +2181,19 @@
         }
         h4 {
             margin-bottom: 6.3rem;
+            .decor {
+                &::before {
+                    background-size: 70%;
+                    left: -1px;
+                    top: 3px;
+                }
+                &:last-child {
+                    &::before {
+                        left: -10px; 
+                        top: calc(100% - 18px);
+                    }
+                }
+            }
         }
         &__line {
             & > div {
@@ -2992,6 +3025,19 @@
         }
         h4 {
             margin-bottom: 5rem;
+            .decor {
+                &::before {
+                    background-size: 50%;
+                    left: -1px;
+                    top: 1px;
+                }
+                &:last-child {
+                    &::before {
+                        left: -18px; 
+                        top: calc(100% - 18px);
+                    }
+                }
+            }
         }
         h5 {
             margin-right: 1rem !important;

@@ -1693,6 +1693,28 @@ ul {
   margin: 0 0 9.4rem;
 }
 
+.additional-modules h4 .decor {
+  position: relative;
+}
+
+.additional-modules h4 .decor::before {
+  content: '';
+  display: block;
+  background-image: url(../assets/icons/word-decor.svg);
+  background-repeat: no-repeat;
+  width: 36px;
+  height: 20px;
+  position: absolute;
+  left: -5px;
+  top: -2px;
+}
+
+.additional-modules h4 .decor:last-child::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  top: calc(100% - 11px);
+}
+
 .additional-modules__features {
   width: 100vw;
 }
@@ -2989,6 +3011,15 @@ ul {
   .additional-modules h4 {
     margin-bottom: 6.3rem;
   }
+  .additional-modules h4 .decor::before {
+    background-size: 70%;
+    left: -1px;
+    top: 3px;
+  }
+  .additional-modules h4 .decor:last-child::before {
+    left: -10px;
+    top: calc(100% - 18px);
+  }
   .additional-modules__line > div {
     height: 9.5rem;
   }
@@ -3838,6 +3869,15 @@ ul {
   }
   .additional-modules h4 {
     margin-bottom: 5rem;
+  }
+  .additional-modules h4 .decor::before {
+    background-size: 50%;
+    left: -1px;
+    top: 1px;
+  }
+  .additional-modules h4 .decor:last-child::before {
+    left: -18px;
+    top: calc(100% - 18px);
   }
   .additional-modules h5 {
     margin-right: 1rem !important;
