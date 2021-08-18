@@ -2166,6 +2166,36 @@ ul {
   margin-right: 19rem;
 }
 
+.our-clients__items img:nth-child(1) {
+  width: 18rem;
+  height: 5.4rem;
+}
+
+.our-clients__items img:nth-child(2) {
+  width: 32.5rem;
+  height: 3.2rem;
+}
+
+.our-clients__items img:nth-child(3) {
+  width: 18.3rem;
+  height: 5.2rem;
+}
+
+.our-clients__items img:nth-child(4) {
+  width: 15.5rem;
+  height: 7.7rem;
+}
+
+.our-clients__items img:nth-child(5) {
+  width: 24.5rem;
+  height: 3rem;
+}
+
+.our-clients__items img:nth-child(6) {
+  width: 19.5rem;
+  height: 6.3rem;
+}
+
 .our-clients__items:not(:last-child) {
   margin-bottom: 9.6rem;
 }
@@ -3220,20 +3250,27 @@ ul {
     padding: 0 2.4rem;
   }
   .additional-modules__line .block-1 {
-    max-width: 30rem;
-    width: 30rem;
+    min-width: 30rem;
+    width: 40%;
+    max-width: 40%;
   }
   .additional-modules__line .block-2 {
-    max-width: 32rem;
-    width: 32rem;
+    min-width: 32rem;
+    width: 40%;
+    max-width: 40%;
   }
   .additional-modules__line .block-3 {
-    max-width: 31rem;
-    width: 31rem;
+    min-width: 31rem;
+    width: 40%;
+    max-width: 40%;
+  }
+  .additional-modules__line .block-3 .block__wrapper {
+    padding-right: 0.5rem !important;
   }
   .additional-modules__line .block-4 {
-    max-width: 25rem;
-    width: 25rem;
+    min-width: 25rem;
+    width: 40%;
+    max-width: 40%;
   }
   .additional-modules__line .block-4::before {
     background-image: url("../assets/icons/decoration-blue-2.png");
@@ -3243,12 +3280,14 @@ ul {
     left: 173px;
   }
   .additional-modules__line .block-5 {
-    max-width: 32rem;
-    width: 32rem;
+    min-width: 32rem;
+    width: 40%;
+    max-width: 40%;
   }
   .additional-modules__line .block-6 {
-    max-width: 30rem;
-    width: 30rem;
+    min-width: 30rem;
+    width: 40% !important;
+    max-width: 40%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -4354,8 +4393,9 @@ ul {
     display: flex;
   }
   .additional-modules__line .block-1 {
-    max-width: 26rem;
-    width: 26rem !important;
+    max-width: 60%;
+    width: 60% !important;
+    min-width: 26rem;
   }
   .additional-modules__line .block-1::before {
     content: '';
@@ -4371,9 +4411,10 @@ ul {
     background-image: none !important;
   }
   .additional-modules__line .block-2 {
-    max-width: 30rem;
-    width: 30rem;
+    max-width: 60%;
+    width: 60%;
     position: relative;
+    min-width: 30rem;
   }
   .additional-modules__line .block-2::before {
     content: '';
@@ -4389,15 +4430,20 @@ ul {
     top: 41px;
   }
   .additional-modules__line .block-3 {
-    max-width: 21rem;
-    width: 21rem;
+    max-width: 60%;
+    width: 60%;
+    min-width: 21rem;
+  }
+  .additional-modules__line .block-3 .block__wrapper {
+    width: 100%;
   }
   .additional-modules__line .block-4 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-width: 24rem;
-    width: 24rem;
+    max-width: 60%;
+    width: 60%;
+    min-width: 24rem;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -4419,12 +4465,15 @@ ul {
             transform: rotate(-15.94deg);
   }
   .additional-modules__line .block-5 {
-    max-width: 29rem;
-    width: 29rem;
+    max-width: 60%;
+    width: 60%;
+    min-width: 30rem;
+    margin-right: 0;
   }
   .additional-modules__line .block-6 {
-    max-width: 23rem;
-    width: 23rem;
+    min-width: 23rem;
+    max-width: 60%;
+    width: 60% !important;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -4454,7 +4503,7 @@ ul {
     width: initial;
   }
   .additional-modules__line:nth-child(1) > div:last-child {
-    width: 4rem;
+    width: 30%;
     border-radius: 0;
     padding: 0;
     margin: 0;
@@ -4463,6 +4512,9 @@ ul {
     position: relative;
     margin-bottom: 3rem;
     left: 1.5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .additional-modules__line:nth-child(2) > div {
     height: 8rem;
@@ -4486,7 +4538,7 @@ ul {
     margin-right: 1.5rem;
   }
   .additional-modules__line:nth-child(3) > div:first-child {
-    width: 8.1rem;
+    width: 30%;
     border-radius: 0 20px 20px 0;
   }
   .additional-modules__line:nth-child(3) > div:last-child {
@@ -4500,7 +4552,7 @@ ul {
   }
   .additional-modules__line:nth-child(4) {
     position: relative;
-    left: 1.5rem;
+    left: 1rem;
   }
   .additional-modules__line:nth-child(4) > div {
     height: 10rem;
@@ -4508,21 +4560,23 @@ ul {
     margin-right: 1.5rem;
   }
   .additional-modules__line:nth-child(4) > div:first-child {
-    border-radius: 20px;
     border: 1px solid #33ccff;
   }
   .additional-modules__line:nth-child(4) > div:last-child {
     border-radius: 20px 0  0 20px;
     border-right: 0;
+    width: 30%;
   }
   .additional-modules__line:nth-child(5) {
     position: relative;
-    left: 1.5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .additional-modules__line:nth-child(5) > div {
     height: 8rem;
     padding: 0 2.8rem;
-    margin-right: 1.5rem;
+    margin-right: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -4540,7 +4594,8 @@ ul {
             align-items: center;
   }
   .additional-modules__line:nth-child(6) > div:first-child {
-    width: 7rem;
+    width: 30%;
+    min-width: 8.1rem;
   }
   .additional-modules__line:nth-child(6) > div:last-child {
     border-radius: 20px;
