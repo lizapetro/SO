@@ -1360,7 +1360,7 @@
             &__price {
                 position: absolute;
                 box-shadow: 4.62745px 4.62745px 46.2745px rgba(0, 0, 0, 0.1);
-                border-radius: 29px;
+                border-radius: 20px;
                 padding: 1.8rem 2rem;
                 background-color: $white;
                 display: flex;
@@ -2177,6 +2177,7 @@
                     font-weight: 400;
                 }
                 .info-item__price {
+                    border-radius: 15px;
                     div {
                         margin-top: 1.5rem;
                     }
@@ -3219,6 +3220,7 @@
                     padding: 1.2rem 1.5rem;
                     right: -1rem;
                     bottom: 5rem;
+                    border-radius: 10.7334px;
                     h2 {
                         font-size: 4.1rem;
                         line-height: 4.8rem;
