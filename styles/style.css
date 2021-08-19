@@ -2009,7 +2009,7 @@ ul {
   max-width: 49.9rem;
   width: 45%;
   padding: 17.4rem 7.4rem 17.1rem;
-  border-radius: 20px 20px 20px 50px;
+  border-radius: 50px;
   border: 1px solid #0F1319;
   position: relative;
 }
@@ -2044,7 +2044,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   padding-left: 4rem;
-  border-radius: 19px 19px 0 0;
+  border-radius: 50px 50px 0 0;
   border-bottom: 1px solid #0F1319;
 }
 
@@ -4043,13 +4043,14 @@ ul {
     width: 100%;
     max-width: 28.9rem;
     padding: 9rem 6.1rem 15rem 3rem;
-    border-radius: 20px;
+    border-radius: 40px;
   }
   .price__info-item::before {
     height: 5rem;
     width: 28.9;
     background-size: 20%;
     background-position: 2rem;
+    border-radius: 40px 40px 0 0;
   }
   .price__info-item::after {
     height: 6.5rem;
