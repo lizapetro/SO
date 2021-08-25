@@ -291,7 +291,7 @@
         left: 10%;
         top: 69rem;
         width: 38.1rem;
-        height:17rem;
+        overflow: hidden;
         &__item {
             border: 1px solid $black;
             border-radius: 2rem;

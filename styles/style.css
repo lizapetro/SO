@@ -768,7 +768,7 @@ ul {
   left: 10%;
   top: 69rem;
   width: 38.1rem;
-  height: 17rem;
+  overflow: hidden;
 }
 
 .draggable-block .swiper-block__item {
